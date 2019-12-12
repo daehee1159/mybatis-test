@@ -21,7 +21,7 @@ public class DBConfig {
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3307/mybatis");
         dataSource.setUsername("root");
-        dataSource.setPassword("aowlr1");
+        dataSource.setPassword("비번");
 
         return dataSource;
     }
