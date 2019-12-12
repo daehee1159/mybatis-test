@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="com.example.demo.demo.TestDao">
+
+    <select id="selectList" resultType="com.example.demo.demo.TestDto">
+
+                     SELECT *
+                     FROM
+                                testtable
+           </select>
+
+
+
+    <select id="selectOne" parameterType="com.example.demo.demo.TestDto" resultType="com.example.demo.demo.TestDto">
+
+                     SELECT *
+                     FROM
+                                testtable
+                     WHERE
+                                id = #{id}
+           </select>
+
+
+
+    <insert id="create" parameterType="com.example.demo.demo.TestDto">
+
+                     INSERT INTO testtable ()
+
+                     VALUES (
+
+                                #{id},
+
+                                #{comment}
+
+                     )
+
+           </insert>
+
+
+
+    <update id="update" parameterType="com.example.demo.demo.TestDto">
+
+                     UPDATE testtable
+
+                     SET
+
+                                comment = #{comment}
+
+                     WHERE
+
+                                id = #{id}
+
+           </update>
+
+
+
+    <delete id="delete" parameterType="com.example.demo.demo.TestDto">
+
+                     DELETE
+
+                     FROM
+
+                                testtable
+
+                     WHERE
+
+                                id = #{id}
+
+           </delete>
+
+
+
+</mapper>
